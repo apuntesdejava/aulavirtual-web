@@ -1,0 +1,10 @@
+@startuml
+Usuario -> UI:Registra datos
+UI -> Controladora: Requiere registrar datos
+Controladora -> EJB: Enviar datos del usuario
+EJB -> JPA: Guarda registros
+JPA --> EJB: Objeto creado
+EJB --> Controladora: Objeto creado
+Controladora --> UI: Confirmacion \nde registro \nde datos
+UI --> Usuario: Muestra confirmacion \nde registro de datos
+@enduml

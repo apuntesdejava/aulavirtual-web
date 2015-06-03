@@ -1,0 +1,10 @@
+@startuml
+Administrador -- (Gestionar Alumnos)
+(Gestionar Alumnos) ..> (Registrar alumno) : include
+(Registrar alumno) -- Alumno
+Administrador -- (Gestionar cursos)
+Profesor -- (Gestionar cursos)
+(Gestionar cursos) ..> (Inscribirse a curso) : include
+(Inscribirse a curso) -- Alumno
+
+@enduml
