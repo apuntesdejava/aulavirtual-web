@@ -1,4 +1,5 @@
 @startuml
+left to right direction
 Administrador -- (Gestionar Alumnos)
 (Gestionar Alumnos) ..> (Registrar alumno) : include
 (Registrar alumno) -- Alumno

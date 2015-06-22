@@ -17,6 +17,7 @@ package com.apuntesdejava.aulavirtual.servlet;
 
 import com.apuntesdejava.aulavirtual.ejb.AlumnoFacade;
 import com.apuntesdejava.aulavirtual.entities.Alumno;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -27,15 +28,18 @@ import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author dsilva
  */
+@MultipartConfig
 @WebServlet(name = "RegistroAlumnoServlet", urlPatterns = {"/RegistroAlumnoServlet"})
 public class RegistroAlumnoServlet extends HttpServlet {
 
@@ -63,7 +67,18 @@ public class RegistroAlumnoServlet extends HttpServlet {
             String email = request.getParameter("email");
             String $fechaNacimiento = request.getParameter("fechaNacimiento");
             Date fechaNacimiento = DATE_FORMAT_DD_MM_YYYY.parse($fechaNacimiento);
-
+            Part fotoPart = request.getPart("foto");
+            int fotoSize=(int)fotoPart.getSize(); //si no tiene tamaño, no hay foto
+            
+            byte[] foto=null; //el buffer
+            if(fotoSize>0){
+                foto=new byte[fotoSize];
+                try(DataInputStream dis=new DataInputStream(fotoPart.getInputStream())){
+                    dis.readFully(foto);
+                    
+                }
+            }
+            
             LOG.log(Level.INFO, "Nombre:{0}", nombre);
             LOG.log(Level.INFO, "sexo:{0}", sexo);
             LOG.log(Level.INFO, "email:{0}", email);
@@ -77,6 +92,10 @@ public class RegistroAlumnoServlet extends HttpServlet {
             alumno.setSexo(sexo);
             alumno.setEmail(email);
             alumno.setFechaNacimiento(fechaNacimiento);
+            
+            if (fotoSize>0)
+                alumno.setFoto(foto);
+            
             if (esNuevo) { //si es nuevo...
                 alumnoFacade.create(alumno); //... lo crea
             } else {//... sino...

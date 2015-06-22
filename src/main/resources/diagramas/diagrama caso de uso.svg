@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="210pt" style="width:672px;height:210px;" version="1.1" viewBox="0 0 672 210" width="672pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <ellipse cx="49.5" cy="18" fill="#FEFECE" filter="url(#f1)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M49.5,26 L49.5,53 M36.5,34 L62.5,34 M49.5,53 L36.5,68 M49.5,53 L62.5,68 " fill="#FEFECE" filter="url(#f1)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="6" y="89.5332">Administrador</text>
+        <ellipse cx="231.4182" cy="50.3836" fill="#FEFECE" filter="url(#f1)" rx="77.4182" ry="17.8836" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="171.4182" y="55.6883">Gestionar Alumnos</text>
+        <ellipse cx="487.6711" cy="50.4342" fill="#FEFECE" filter="url(#f1)" rx="72.6711" ry="16.9342" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="433.6711" y="55.7389">Registrar alumno</text>
+        <ellipse cx="647.5" cy="50" fill="#FEFECE" filter="url(#f1)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M647.5,58 L647.5,85 M634.5,66 L660.5,66 M647.5,85 L634.5,100 M647.5,85 L660.5,100 " fill="#FEFECE" filter="url(#f1)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="624" y="121.5332">Alumno</text>
+        <ellipse cx="231.6711" cy="120.4342" fill="#FEFECE" filter="url(#f1)" rx="72.6711" ry="16.9342" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="177.6711" y="125.7389">Gestionar cursos</text>
+        <ellipse cx="49.5" cy="138" fill="#FEFECE" filter="url(#f1)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M49.5,146 L49.5,173 M36.5,154 L62.5,154 M49.5,173 L36.5,188 M49.5,173 L62.5,188 " fill="#FEFECE" filter="url(#f1)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="54" x="22.5" y="209.5332">Profesor</text>
+        <ellipse cx="487.4176" cy="120.4835" fill="#FEFECE" filter="url(#f1)" rx="75.4176" ry="17.4835" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="115" x="429.9176" y="125.7882">Inscribirse a curso</text>
+        <path d="M93.1575,50.5 C111.351,50.5 133.152,50.5 153.97,50.5 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M309.053,50.5 C340.943,50.5 377.901,50.5 409.806,50.5 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="#A80036" points="414.882,50.5,405.882,46.5,409.882,50.5,405.882,54.5,414.882,50.5" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="41" x="340" y="46.9951">include</text>
+        <path d="M542.875,61.513 C570.547,67.117 602.698,73.629 623.76,77.894 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M93.1575,67.089 C123.618,78.935 164.194,94.714 193.332,106.046 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M76.6735,163.2296 C104.755,155.4292 149.916,142.8843 184.058,133.4006 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M304.268,120.5 C336.156,120.5 373.814,120.5 406.596,120.5 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="#A80036" points="411.813,120.5,402.813,116.5,406.813,120.5,402.813,124.5,411.813,120.5" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="41" x="340" y="116.9951">include</text>
+        <path d="M540.673,107.952 C568.897,101.164 602.306,93.129 623.924,87.93 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+    </g>
+</svg>

@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Temporal;
 
 /**
@@ -31,6 +32,16 @@ public class Alumno implements Serializable {
     private String sexo;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaNacimiento;
+    @Lob
+    private byte[] foto;
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
 
     public String getEmail() {
         return email;

@@ -4,6 +4,7 @@
     Author     : dsilva
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
     <body>
         <div class="container">
             <h1>Registro de alumno</h1>
-            <form method="post" action="<%= request.getContextPath() %>/RegistroAlumnoServlet">
+            <form method="post" action="<%= request.getContextPath() %>/RegistroAlumnoServlet" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="${alumno.id}"/>
                 <div class="form-group" >                
                     <label for="nombre"> 
@@ -60,8 +61,17 @@
                     <label for="fechaNacimiento">
                         Fecha nacimiento
                     </label>
-                    <input id="fechaNacimiento" value="<fmt:formatDate value='${alumno.fechaNacimiento}' pattern="dd/MM/yyyy"/>" class="form-control"  name="fechaNacimiento"  placeholder="Escriba su fecha de nacimiento" required="true"/>
+                    <input id="fechaNacimiento" type="text" value="<fmt:formatDate value='${alumno.fechaNacimiento}' pattern="dd/MM/yyyy"/>" class="form-control"  name="fechaNacimiento"  placeholder="Escriba su fecha de nacimiento" required="true"/>
                 </div>
+                
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto"/><br/>
+                    <c:if test="${alumno.foto ne null}">
+                        <img src="<%=request.getContextPath()%>/MostrarFotoServlet?id=${alumno.id}" style="width: 100px;"/>
+                    </c:if>
+                </div>
+                
                 <div>
                     <input type="submit" value="Registrar" class="btn btn-primary"/>
                 </div>
